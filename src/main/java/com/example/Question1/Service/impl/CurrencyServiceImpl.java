@@ -29,6 +29,8 @@ public class CurrencyServiceImpl implements CurrencyService {
     @Override
     public CurrencySrvRes getCheapestCurrency() throws IOException, JSONException {
 
+        /*I designed this way to read data from Url and find and show the cheapest amount of currency and save to db.*/
+
         JSONArray jsonArray1 = getJsonArrayByUrl("https://run.mocky.io/v3/e4c58892-3eaa-49e8-a2d4-88ffb0f97c27");
 
         List<CurrencyEntity> currencyEntityList = new ArrayList<>();
@@ -115,6 +117,8 @@ public class CurrencyServiceImpl implements CurrencyService {
             if(minAmountWithCurrency.isPresent()) {
 
                 // currencyRepository.save(minAmountWithCurrency);
+
+                /*I couldn't fully understand the task. So I saved records to db in here*/
 
                 CurrencyDTO currencyDTO = new CurrencyDTO();
 
